@@ -57,7 +57,7 @@ Other features in the below code example.
 ```
 
 * width and height - You can control the video size either with these attributes or with CSS. In both cases, videos maintain their native width-height ratio — known as the aspect ratio. If the aspect ratio is not maintained by the sizes you set, the video will grow to fill the space horizontally, and the unfilled space will just be given a solid background color by default.
-* autoplay - This attribute makes the audio or video start playing right away while the rest of the page is loading. You are advised not to use autoplaying video (or audio) on your sites, because users can find it really annoying.
+* autoplay - This attribute makes the audio or video start playing right away while the rest of the page is loading. You are advised not to use auto playing video (or audio) on your sites, because users can find it really annoying.
 * loop - This attribute makes the video (or audio) start playing again whenever it finishes. This can also be annoying, so only use if really necessary.
 * muted - This attribute causes the media to play with the sound turned off by default.
 * poster - This attribute takes as its value the URL of an image, which will be displayed before the video is played. It is intended to be used for a splash or advertising screen.
