@@ -123,4 +123,8 @@ HTML also provides the `<time>` element for marking up times and dates in a mach
 
 ---
 
+Prepared from <https://developer.mozilla.org/en-US/docs/Learn/HTML/>
+
+---
+
 Fin

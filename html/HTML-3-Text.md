@@ -55,4 +55,8 @@ We use the `<strong>` (strong importance) element to mark up bold content.
 
 ---
 
+Prepared from <https://developer.mozilla.org/en-US/docs/Learn/HTML/>
+
+---
+
 Fin

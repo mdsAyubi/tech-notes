@@ -69,4 +69,8 @@ p {
 
 ---
 
+Prepared from <https://developer.mozilla.org/en-US/docs/Learn/HTML/>
+
+---
+
 Fin

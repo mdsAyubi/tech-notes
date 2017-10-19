@@ -106,4 +106,8 @@ any standard mail header fields can be added to the mailto URL you provide. The 
 
 ---
 
+Prepared from <https://developer.mozilla.org/en-US/docs/Learn/HTML/>
+
+---
+
 Fin
