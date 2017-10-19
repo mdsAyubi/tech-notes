@@ -26,8 +26,8 @@ SVG is an XML-based language for describing vector images. It's basically markup
 To embed an SVG via an `<img>` element, you just need to reference it in the src attribute as you'd expect. For example,
 
 ```html
-<img 
-    src="equilateral.svg" 
+<img
+    src="equilateral.svg"
     alt="triangle with all three sides equal"
     height="87px"
     width="100px" />

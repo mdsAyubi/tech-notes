@@ -10,7 +10,7 @@ The `<video>` element allows you to embed a video very easily. For example,
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p> 
+  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.webm">link to the video</a> instead.</p>
 </video>
 ```
 

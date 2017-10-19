@@ -26,7 +26,7 @@ Various metadata for the page can be defined using this tag. Let's go through th
 
 To further enrich your site design, you can add references to custom icons in your metadata, and these will be displayed in certain contexts. For example, `<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">`
 
-## Applying CSS and JavaScript 
+## Applying CSS and JavaScript
 
 * The `<link>` element always goes inside the head of your document. This takes two attributes, `rel="stylesheet"`, which indicates that it is the document's style sheet, and `href`, which contains the path to the style sheet file. For example, `<link rel="stylesheet" href="my-css-file.css">`
 * The `<script>` element does not have to go in the head; in fact, often it is better to put it at the bottom of the document body (just before the closing `</body>` tag), to make sure that all the HTML content has been read by the browser before it tries to apply JavaScript to it (if JavaScript tries to access an element that doesn't yet exist, the browser will throw an error.). Usage example, `<script src="my-js-file.js"></script>`

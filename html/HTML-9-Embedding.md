@@ -57,9 +57,9 @@ Embed example,
 Object example,
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
+<object data="my_pdf.pdf" type="application/pdf"
         width="800" height="1200" typemustmatch>
-  <p>You don't have a PDF plugin, but you can <a href="myfile.pdf">download the PDF file.</a></p>
+  <p>You don't have a PDF plugin, but you can <a href="my_file.pdf">download the PDF file.</a></p>
 </object>
 ```
 
