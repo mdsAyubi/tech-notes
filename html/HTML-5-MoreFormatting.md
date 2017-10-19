@@ -120,3 +120,7 @@ HTML also provides the `<time>` element for marking up times and dates in a mach
 ```html
 <time datetime="2016-01-20">20 January 2016</time>
 ```
+
+---
+
+Fin

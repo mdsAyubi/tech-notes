@@ -64,10 +64,10 @@ play, the lights should be down low]</span>.</p>
 ## Planning a Website
 
 1. You'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content.
-2. Draw a rough sketch of what you might want the structure of each page to look like. Note the blocks.
-3. Brainstorm all the other (not common to every page) content you want to have on your website.
-4. Sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called *Card sorting*.
-5. Sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages.
+1. Draw a rough sketch of what you might want the structure of each page to look like. Note the blocks.
+1. Brainstorm all the other (not common to every page) content you want to have on your website.
+1. Sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called *Card sorting*.
+1. Sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages.
 
 ---
 

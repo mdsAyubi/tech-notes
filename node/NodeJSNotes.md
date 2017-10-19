@@ -1,6 +1,7 @@
 # Node JS Notes
 
 ## Hello World
+
 - `console.log("Hello World");`
 - Everything has a return value
 - .help for help
@@ -8,6 +9,7 @@
 - Ctrl D to exit
 
 ## Writing first web server
+
 ```javascript
 var http=require('http');
 var s = http.createServer(function(req,res){
@@ -37,7 +39,6 @@ s.listen(8080);
 - setBreakpoint(5) or sb
 - next
 - we can start repl also
-
 
 ## Basic Types
 
@@ -71,7 +72,7 @@ s.listen(8080);
 - `substr(startingIndex,length)`
 - `slice(startingIndex, endingIndex)`
 - `split(separator)`
-- `trim()` remmove spaces from the beginning and end
+- `trim()` remove spaces from the beginning and end
 - regular expression like : `/[aA]{2,}/` or `new RegExp(expression)`
 - `"aaa00".search(regex)`
 - `replace(regexp,regexp)`
@@ -127,7 +128,7 @@ names.sort(function(a,b){
 
 ## Language Constructs
 
-- == and ===
+- `==` and `===`
 - `'' == false == null == undefined == 0` =>true
 - `null === undefined` => false
 - usual ternary operator
@@ -150,17 +151,15 @@ names.sort(function(a,b){
 
 ## Asynchronous Programming
 
--There is only one process running at a time which pushes events on the Event stack/listeners. Once the notification from the underlying mechanism is received, the functions in the event stack is popped and executed, which in turn can put something else on the stack.
+There is only one process running at a time which pushes events on the Event stack/listeners. Once the notification from the underlying mechanism is received, the functions in the event stack is popped and executed, which in turn can put something else on the stack.
 
 ## Errors in async world
 
--Always check for errors in callback functions instead of writing try catch
-
+Always check for errors in callback functions instead of writing try catch
 
 ## Yielding control
 
 - Consider two async functions, one of which is taking all the available memory, the other cant finish. To remedy this, we use `process.nextTick(callback)` or `setImmediate(callback);`
-
 
 ## Looping and Async programming
 
@@ -185,15 +184,14 @@ What happens when you call async version of an API like fstat in a loop, the fun
 
 ## Express
 
-- Usually written as app.<method>(<regrex>,[optional function],<handler function>);
+- Usually written as `app.<method>(<regrex>,[optional function],<handler function>);`
 - Can write parameterized queries for urls
 - get,post,all,delete,put
 - matching is done from top to bottom
 
-
 ## API Design
 
-- CRUD Design 
+- CRUD Design
 - Create PUT
 - Retrieve GET
 - Update POST
@@ -206,21 +204,21 @@ What happens when you call async version of an API like fstat in a loop, the fun
 - Slight changes such as pagination or filtering, use query params
 - REST apis should be versioned
 - Include data format in URL, allows for different formats in future
- check blinksale.com/api
+- check blinksale.com/api
 
 ## Connect
 
-- senchalabs.org
-- expressjs.com
+- <senchalabs.org>
+- <expressjs.com>
 - app.use(<component>)
 - app.use(express.responseTime())
 - Kind of like filters in J2EE
-- middlewares are ordered
+- middle wares are ordered
 - generic ones should be below in ordering
 
 ## Serving static content
 
-- app.use(express.static(__dirname));
+- `app.use(express.static(__dirname));`
 - bodyParser
 - cookieParser
 - session
@@ -237,15 +235,20 @@ What happens when you call async version of an API like fstat in a loop, the fun
 - db.collections to create tables/collection
 - db.createCollection
 - albums.insert --to insert a record into a collection
-- db.close 
-- errocode for different errors like 11000 for duplicate
+- db.close
+- error code for different errors like 11000 for duplicate
 - albums.insert
 - albums.remove({_id:<some_id>})
-- albumns.update({_id:<some_id>},
-				{$set : {description:'this is new description...'}},
-				{safe:true},
-				cb
-				);
+- Update
+
+```javascript
+albumns.update({_id:<some_id>},
+{$set : {description:'this is new description...'}},
+{safe:true},
+cb
+);
+```
+
 - In case of update
 	* set
 	* inc
@@ -259,6 +262,7 @@ What happens when you call async version of an API like fstat in a loop, the fun
 
 - find() --sets up a curser based on search param. Does not do anything
 - With sync model, calls a call back function, e.g
+
 ```javascript
 albums.find().toArray(cb)
 
@@ -267,7 +271,7 @@ function(found_results,cb){
 }
 ```
 
-	OR
+OR
 
 ```javascript
 albums.find().each(function(err,item){ --calls this function for all items
@@ -280,7 +284,7 @@ albums.find().each(function(err,item){ --calls this function for all items
 });
 ```
 
-	OR
+OR
 
 ```javascript
 var s = albumns.find().stream();

@@ -39,8 +39,8 @@ Attributes contain extra information about the element which you don't want to a
 An attribute should have:
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)
-2. The attribute name, followed by an equals sign.
-3. An attribute value, with opening and closing quote marks wrapped around it.
+1. The attribute name, followed by an equals sign.
+1. An attribute value, with opening and closing quote marks wrapped around it.
 
 ## Boolean Attributes
 
@@ -64,11 +64,11 @@ Attributes written without values — this is perfectly allowed. These are calle
 ```
 
 1. `<!DOCTYPE html>` - The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. Not required anymore. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype.
-2. `<html></html>` - The `<html>` element. This element wraps all the content on the entire page, and is sometimes known as the root element.
-3. `<head></head>` - The `<head>` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers.
-4. `<meta charset="utf-8">` - This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages.
-5. `<title></title>` - This sets the title of your page, which is the title that appears in the browser tab the page is loaded.
-6. `<body></body>` - This contains all the content that you want to show to web users when they visit your page.
+1. `<html></html>` - The `<html>` element. This element wraps all the content on the entire page, and is sometimes known as the root element.
+1. `<head></head>` - The `<head>` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers.
+1. `<meta charset="utf-8">` - This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages.
+1. `<title></title>` - This sets the title of your page, which is the title that appears in the browser tab the page is loaded.
+1. `<body></body>` - This contains all the content that you want to show to web users when they visit your page.
 
 ## Whitespace in HTML
 
@@ -86,4 +86,6 @@ In HTML, the characters `< > " ' &` are special characters. They are parts of th
 
 To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers `<!--` and `-->`
 
+---
 
+Fin
