@@ -723,3 +723,11 @@ The type of box applied to an element is specified by the `display` property. Th
 * A `block` box is defined as a box that's stacked upon other boxes (i.e. content before and after the box appears on a separate line), and can have `width` and `height` set on it. The whole box model as described above applies to block boxes.
 * An `inline` box is the opposite of a `block` box : it flows with the document's text (i.e. it will appear on the same line as surrounding text and other inline elements, and its content will break with the flow of the text, like lines of text in a paragraph.) Width and height settings have no effect on inline boxes; any padding, margin and border set on inline boxes will update the position of surrounding text, but will not affect the position of surrounding block boxes.
 * An `inline-block` box is something in between the first two : It flows with surrounding text without creating line breaks before and after it unlike a block box, but it can be sized using width and height and maintains its block integrity like a block box. It won't be broken across paragraph lines like an inline box.
+
+---
+
+Prepared from <https://developer.mozilla.org/en-US/docs/Learn/CSS>
+
+---
+
+Fin
