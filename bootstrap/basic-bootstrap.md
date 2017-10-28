@@ -432,3 +432,579 @@ To right-align the dropdown, add the `.dropdown-menu-right` class to the element
 ### Dropup
 
 Dropdown menu to expand upwards instead of downwards, change the `<div>` element with class="dropdown" to "dropup".
+
+## Bootstrap Collapse
+
+### Basic Collapsible
+
+Collapsibles are useful when you want to hide and show large amount of content.
+
+```html
+<button data-toggle="collapse" data-target="#demo">Collapsible</button>
+
+<div id="demo" class="collapse">
+Lorem ipsum dolor text....
+</div>
+```
+
+By default, the collapsible content is hidden. However, you can add the `.in` class to show the content by default.
+
+### Collapsible Panel
+
+```html
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">Panel Body</div>
+      <div class="panel-footer">Panel Footer</div>
+    </div>
+  </div>
+</div>
+```
+
+### Collapsible List Group
+
+```html
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">Collapsible list group</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <ul class="list-group">
+        <li class="list-group-item">One</li>
+        <li class="list-group-item">Two</li>
+        <li class="list-group-item">Three</li>
+      </ul>
+      <div class="panel-footer">Footer</div>
+    </div>
+  </div>
+</div>
+```
+
+## Bootstrap Tabs and Pills
+
+### Menus
+
+If you want to create a horizontal menu of the list above, add the `.list-inline` class to `<ul>`.
+
+### Tabs
+
+Tabs are created with `<ul class="nav nav-tabs">`. Also mark the current page with `<li class="active">`.
+
+```html
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+```
+
+#### Tabs With Dropdown Menu
+
+```html
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Home</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Submenu 1-1</a></li>
+      <li><a href="#">Submenu 1-2</a></li>
+      <li><a href="#">Submenu 1-3</a></li> 
+    </ul>
+  </li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+```
+
+### Pills
+
+Pills are created with `<ul class="nav nav-pills">`. Also mark the current page with `<li class="active">`.
+
+```html
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+```
+
+#### Vertical Pills
+
+Pills can also be displayed vertically. Just add the `.nav-stacked` class. For example,
+
+```html
+<ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Menu 1</a></li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+```
+
+#### Vertical Pills in a Row
+
+```html
+<div class="col-md-3">
+  <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+  </ul>
+</div>
+```
+
+#### Pills With Dropdown Menu
+
+```html
+<ul class="nav nav-pills nav-stacked">
+  <li class="active"><a href="#">Home</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Submenu 1-1</a></li>
+      <li><a href="#">Submenu 1-2</a></li>
+      <li><a href="#">Submenu 1-3</a></li> 
+    </ul>
+  </li>
+  <li><a href="#">Menu 2</a></li>
+  <li><a href="#">Menu 3</a></li>
+</ul>
+```
+
+### Centered Tabs and Pills
+
+To center/justify the tabs and pills, use the `.nav-justified` class.
+
+### Toggleable / Dynamic Tabs
+
+To make the tabs toggleable, add the `data-toggle="tab"` attribute to each link. Then add a `.tab-pane` class with a unique ID for every tab and wrap them inside a `<div>` element with class `.tab-content`.
+
+If you want the tabs to fade in and out when clicking on them, add the `.fade` class to `.tab-pane`.
+
+```html
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+  <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
+```
+
+### Toggleable / Dynamic Pills
+
+The above code applies to pills; only change the data-toggle attribute to `data-toggle="pill"`.
+
+## Bootstrap Navigation Bar
+
+### Navigation Bars
+
+A navigation bar is a navigation header that is placed at the top of the page. With Bootstrap, a navigation bar can extend or collapse, depending on the screen size.
+
+A standard navigation bar is created with `<nav class="navbar navbar-default">`. For example,
+
+```html
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+```
+
+### Inverted Navigation Bar
+
+Just change the .navbar-default class into `.navbar-inverse`.
+
+### Navigation Bar With Dropdown
+
+```html
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+```
+
+### Right-Aligned Navigation Bar
+
+The `.navbar-right` class is used to right-align navigation bar buttons.
+
+### Navbar Buttons
+
+To add buttons inside the navbar, add the `.navbar-btn` class on a Bootstrap button.
+
+### Navbar Forms
+
+To add form elements inside the navbar, add the `.navbar-form` class to a form element and add an input(s). Add a `.form-group` class to the div container holding the input. This adds proper padding if you have more than one inputs.
+
+### Navbar Text
+
+Use the `.navbar-text` class to vertical align any elements inside the navbar that are not links.
+
+### Fixed Navigation Bar
+
+The navigation bar can also be fixed at the top or at the bottom of the page. A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll. The `.navbar-fixed-top` class makes the navigation bar fixed at the top. The `.navbar-fixed-bottom` class makes the navigation bar stay at the bottom.
+
+### Collapsing The Navigation Bar
+
+The navigation bar takes up too much space on a small screen. We should hide the navigation bar; and only show it when it is needed. For example,
+
+```html
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span> 
+  </button>
+  <a class="navbar-brand" href="#">WebSiteName</a>
+</div>
+```
+
+## Bootstrap Forms
+
+### Default Form Settings
+
+Form controls automatically receive some global styling with Bootstrap. All textual `<input>`, `<textarea>`, and `<select>` elements with class `.form-control` have a width of 100%.
+
+### Form Layouts
+
+Bootstrap provides three types of form layouts:
+
+* Vertical form (this is default)
+* Horizontal form
+* Inline form
+
+Standard rules for all three form layouts:
+
+* Wrap labels and form controls in `<div class="form-group">` (needed for optimum spacing)
+* Add class `.form-control` to all textual `<input>`, `<textarea>`, and `<select>` elements.
+
+### Vertical Form (default)
+
+```html
+<form>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
+
+### Inline Form
+
+To get an inline form layout, add class `.form-inline` to the `<form>` element. For example,
+
+```html
+<form class="form-inline">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+```
+
+### Horizontal Form
+
+A horizontal form means that the labels are aligned next to the input field (horizontal) on large and medium screens. On small screens (767px and below), it will transform to a vertical form.
+
+* Add class `.form-horizontal` to the `<form>` element.
+* Add class `.control-label` to all `<label>` elements.
+
+## Bootstrap Form Inputs
+
+### Supported Form Controls
+
+Bootstrap supports the following form controls:
+
+* input - `<input type="text" class="form-control" id="usr">`
+* textarea - `<textarea class="form-control" rows="5" id="comment"></textarea>`
+* checkbox - `<input type="checkbox" value="">`
+* radio - `<input type="radio" name="options_radio">`
+* select - `select class="form-control" id="sel1"><option>1</option></select>`
+
+Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
+
+### Static Control
+
+If you need to insert plain text next to a form label within a horizontal form, use the `.form-control-static` class on a `<p>` element.
+
+### Input Groups
+
+* The `.input-group` class is a container to enhance an input by adding an icon, text or a button in front or behind it as a "help text".
+* The `.input-group-addon` class attaches an icon or help text next to the input field.
+* The `.input-group-btn` attaches a button next to an input. This is often used together with a search bar.
+
+### Form Control States
+
+* INPUT FOCUS - The outline of the input is removed and a box-shadow is applied on focus
+* DISABLED INPUTS - Add a `disabled` attribute to disable an input field
+* DISABLED FIELD SETS - Add a `disabled` attribute to a field set to disable all controls within
+* READ ONLY INPUTS - Add a `readonly` attribute to an input to prevent user input
+* VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages. To use, add `.has-warning`, `.has-error`, or `.has-success` to the parent element
+* ICONS - You can add feedback icons with the `.has-feedback` class and an icon
+* HIDDEN LABELS - Add a `.sr-only` class on non-visible labels
+
+## Bootstrap Input Sizing
+
+### Input Sizing in Forms
+
+Set the heights of input elements using classes like `.input-lg` and `.input-sm`. Set the widths of elements using grid column classes like `.col-lg-*` and `.col-sm-*`.
+
+### Help Text
+
+Use the `.help-block` class to add a block level help text in forms.
+
+## Bootstrap Media Objects
+
+### Basic Media Object
+
+Use a `<div>` element with the `.media` class to create a container for media objects.
+
+Use the `.media-left` class to align the media object (image) to the left, or the `.media-right` class to align it to the right.
+
+Text that should appear next to the image, is placed inside a container with `media-body`.
+
+Additionally, you can use `.media-heading` for headings. For example,
+
+```html
+<div class="media">
+  <div class="media-left">
+    <img src="img_avatar1.png" class="media-object" style="width:60px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">John Doe</h4>
+    <p>Lorem ipsum...</p>
+  </div>
+</div>
+```
+
+The media object can also be top, middle or bottom aligned with the `media-top`, `media-middle` or `media-bottom` class.
+
+## Bootstrap Carousel Plugin
+
+### How To Create a Carousel
+
+```html
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="la.jpg" alt="Los Angeles">
+    </div>
+
+    <div class="item">
+      <img src="chicago.jpg" alt="Chicago">
+    </div>
+
+    <div class="item">
+      <img src="ny.jpg" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+```
+
+## Bootstrap Modal Plugin
+
+### The Modal Plugin
+
+The Modal plugin is a dialog box/popup window that is displayed on top of the current page.
+
+### How To Create a Modal
+
+```html
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+```
+
+### Modal Size
+
+Change the size of the modal by adding the `.modal-sm` class for small modals or `.modal-lg` class for large modals.
+
+Add the size class to the `<div>` element with class `.modal-dialog`.
+
+## Bootstrap Tooltip Plugin
+
+### The Tooltip Plugin
+
+The Tooltip plugin is small pop-up box that appears when the user moves the mouse pointer over an element.
+
+### How To Create a Tooltip
+
+To create a tooltip, add the `data-toggle="tooltip"` attribute to an element.
+
+Use the `title` attribute to specify the text that should be displayed inside the tooltip. For example, `<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>`.
+
+Tool tips must be initialized with jQuery: select the specified element and call the `tooltip()` method. Use the `data-placement` attribute to set the position of the tooltip on top, bottom, left or the right side of the element. You can also use the `data-placement` attribute with a value of "auto", which will let the browser decide the position of the tooltip.
+
+## Bootstrap Popover Plugin
+
+### The Popover Plugin
+
+The Popover plugin is similar to tool tips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.
+
+### How To Create a Popover
+
+To create a popover, add the `data-toggle="popover"` attribute to an element.
+
+Use the `title` attribute to specify the header text of the popover, and use the `data-content` attribute to specify the text that should be displayed inside the popover's body. For example,
+
+`<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>`
+
+Popovers must be initialized with jQuery: select the specified element and call the `popover()` method.
+
+Use the `data-placement` attribute to set the position of the popover on top, bottom, left or the right side of the element.
+
+### Closing Popovers
+
+By default, the popover is closed when you click on the element again. However, you can use the `data-trigger="focus"` attribute which will close the popover when clicking outside the element.
+
+## Bootstrap Scrollspy Plugin
+
+### The Scrollspy Plugin
+
+The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.
+
+### How To Create a Scrollspy
+
+Add `data-spy="scroll"` to the element that should be used as the scrollable area (often this is the `<body>` element).
+
+Then add the `data-target` attribute with a value of the id or the class name of the navigation bar (`.navbar`). This is to make sure that the navbar is connected with the scrollable area.
+
+Note that scrollable elements must match the ID of the links inside the navbar's list items (`<div id="section1">` matches `<a href="#section1">`).
+
+The optional `data-offset` attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements. Default is 10 pixels.
+
+```html
+<!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+...
+  <ul class="nav navbar-nav">
+    <li><a href="#section1">Section 1</a></li>
+    ...
+</nav>
+
+<!-- Section 1 -->
+<div id="section1">
+  <h1>Section 1</h1>
+  <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+</div>
+...
+
+</body>
+```
+
+## Bootstrap Affix Plugin
+
+The Affix plugin allows an element to become affixed (locked) to an area on the page. This is often used with navigation menus or social icon buttons, to make them "stick" at a specific area while scrolling up and down the page.
+
+### How To Create an Affixed Navigation Menu
+
+Add `data-spy="affix"` to the element you want affixed. Optionally, add the `data-offset-top|bottom` attribute to calculate the position of the scroll.
