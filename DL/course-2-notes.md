@@ -49,3 +49,37 @@
 
 * Data augmentation : Add more versions of training examples
 * Early stopping
+
+## Setting up Optimization Problem
+
+### Normalizing inputs
+
+* Usually subtract mean and divide by variance. Use the same mu and sigma for test set as well.
+* Normalizing the input features to the same scale gives a better, more symmetric shape to the cost function and gradient descent converges faster.
+
+### Vanishing and Exploding Gradients
+
+* The case where the derivatives are very very large or exponentially small.
+* With very deep networks if `w[l]` is greater than or less than I(identity matrix), the derivative or the slope for gradient descent can become very large or very small.
+
+### Weight Initialization for Deep Networks
+
+* Usually the weight matrix is setup with the following code `w[l] = np.random.randn(shape) * np.sqrt(2 / n[l-1])`.
+* The above sets the variance of the weight matrix to `2 / n`
+* Tune the other hyper parameters first before tuning the initialization of weights.
+
+### Gradient Checking
+
+* Take w[l], b[l] and reshape them into a vector theta.
+* Again, take dw[l] and db[l] and reshape into a vector d_theta of the same shape as theta
+* `for each i: d_theta_approx = J(theta_1, theta_2, theta_i + e...) - J(theta_1, theta_2, theta_i - e, ...) / 2*e`
+* Turns out, `d_theta_approx ~ dJ/d_theta`
+* The check if `||d_theta_approx - d_theta||_2 / (||d_theta_approx||_2 + ||d_theta||_2)` ~ 10e-7 then great when e = 10e-7
+
+### Implementation notes
+
+* Only use to debug not to train
+* If algorithm fails grad check, look at the components to try to identify the bug
+* Remember regularization if used. Used it.
+* Does not work with drop out.
+* Run at random initialization, perhaps again after some training.
