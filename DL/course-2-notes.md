@@ -83,3 +83,72 @@
 * Remember regularization if used. Used it.
 * Does not work with drop out.
 * Run at random initialization, perhaps again after some training.
+
+## Optimization Algorithms
+
+### Mini batch gradient descent
+
+* Vectorization allows to efficiently compute on m examples
+* Baby training sets. Of 1000 size(say). The `X` matrix becomes 1000 matrices of size (Nx, 1000). `Y` matrix is of shape (1, 1000)
+* 1 step of gradient descent using X{t}, Y{t} of size 1000
+* Don't use for small training size
+* Usual sizes for mini batch size 64, 128, 256, 512.
+* Make sure one mini batch fits in CPU/GPU
+* Treated as another hyper parameter.
+
+### Exponentially Weighted Averages
+
+* V(t) = BV(t-1) + (1-B)theta_t
+* V(t) = V(t) / (1 - B^t)
+
+### Gradient Descent with Momentum
+
+* Vdw = BVdw + (1-B)dw
+* Vdb = BVdb + (1-B)db
+* `W = W - alpha * Vdw, b = b - alpha * Vdb`
+
+### RMSProp
+
+* Sdw = BSdw + (1-B)dw**2 -- element wise squared
+* Sdb = BSdb + (1-B)db**2 -- element wise squared
+* W = W - alpha * dw / sqrt(Sdw)
+* b = b - alpha * db / sqrt(Sdb)
+
+### Adam Optimization
+
+* Combination of RMSProp and momentum
+
+### Learning rate Decay
+
+* As learning approaches convergence, slower learning rate might be more optimum.
+* `learning_rate = 1 / (1 + decay_rate * epoch_num) * alpha_0`
+
+### The Problem of Local Optima
+
+* Unlikely to get stuck in bad local optima for high dimensional space
+* Plateaus can make learning slow.
+
+## Hyper parameter tuning
+
+### The Tuning Process
+
+* Tune learning_rate first, then (beta, hidden units, mini batch size), then (layers, learning rate decay)
+* Try random values not a grid of values
+* Coarse to fine, first find a coarse value then fine tune and zoom into it.
+
+### Using appropriate Scale
+
+* Sample on the log scale
+
+### Hyper parameter tuning in Practice
+
+* Re-test hyper parameters occasionally
+* Baby sit one model or training many models in parallel.
+
+## Batch Normalization
+
+### Normalizing activations
+
+* Normalizing A[l], or Z[l]
+
+
