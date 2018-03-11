@@ -151,4 +151,29 @@
 
 * Normalizing A[l], or Z[l]
 
+### Fitting batch normalization into a NN
 
+* The batch norm step happens after the computation of Z, which is normalized and then fed into the activation function.
+* The batch norm parameters for different layers are different.
+* Applied with mini batch.
+* Also has a slight regularization effect.
+
+### Batch Norm at test time
+
+* Separate estimate of nu and sigma at test time. Calculated using exponentially weighted average.
+* Keep track of mu and sigma while training using exponentially weighted average. The  use the same at the test time.
+
+## Multi class Classification
+
+### Softmax Regression
+
+* Output layer has C units
+* Soft max layer
+* `a[l] = e^z[l] / sum[j=1 to C](t_i)`
+
+## Programming Frameworks
+
+### Deep Learning frameworks
+
+* Caffe, Caffe 2, CNTK, DL4J, Keras, Theano, Torch, Tensorflow, Lasagne, mxnet, PaddlePaddle
+* Ease of programming, Running speed, truly open(open source with good governance)
