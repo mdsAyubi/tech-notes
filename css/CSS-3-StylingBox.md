@@ -10,13 +10,13 @@ The background of an element is the area that sits underneath an element's conte
 
 There are many other different properties you can use to manipulate the element's background, some of which we have already seen a number of times in our course already:
 
-* `background-color`: Sets a solid color for the background.
-* `background-image`: Specifies a background image to appear in the background of the element. This can be a static file, or a generated gradient.
-* `background-position`: Specifies the position that the background should appear inside the element background.
-* `background-repeat`: Specifies whether the background should be repeated (tiled) or not.
-* `background-attachment`: Specifies the behavior of an element's background when its content scrolls, e.g. does it scroll with the content, or is it fixed?
-* `background`: Shorthand for specifying the above five properties on one line.
-* `background-size`: Allows a background image to be resized dynamically.
+- `background-color`: Sets a solid color for the background.
+- `background-image`: Specifies a background image to appear in the background of the element. This can be a static file, or a generated gradient.
+- `background-position`: Specifies the position that the background should appear inside the element background.
+- `background-repeat`: Specifies whether the background should be repeated (tiled) or not.
+- `background-attachment`: Specifies the behavior of an element's background when its content scrolls, e.g. does it scroll with the content, or is it fixed?
+- `background`: Shorthand for specifying the above five properties on one line.
+- `background-size`: Allows a background image to be resized dynamically.
 
 ### The basics: color, image, position, repeat
 
@@ -24,8 +24,8 @@ There are many other different properties you can use to manipulate the element'
 
 Usage of the `background-color` property.
 
-* The default background color of most elements is not white (as you might expect) but transparent — therefore if you set an element's background color to something interesting, but want its child elements to be white, you'll have to set that explicitly.
-* It is important to set a background color as a fallback. Background colors are supported pretty much everywhere.
+- The default background color of most elements is not white (as you might expect) but transparent — therefore if you set an element's background color to something interesting, but want its child elements to be white, you'll have to set that explicitly.
+- It is important to set a background color as a fallback. Background colors are supported pretty much everywhere.
 
 #### Background image
 
@@ -45,9 +45,9 @@ p {
 
 `background-repeat` allows you to specify how the background image is repeated. The default is `repeat`. Other values are
 
-* `no-repeat`: The image will not repeat at all: it will only be shown once.
-* `repeat-x`: The image will repeat horizontally all the way across the background.
-* `repeat-y`: The image will repeat vertically all the way down the background.
+- `no-repeat`: The image will not repeat at all: it will only be shown once.
+- `repeat-x`: The image will repeat horizontally all the way across the background.
+- `repeat-y`: The image will repeat vertically all the way down the background.
 
 ```css
 p {
@@ -90,16 +90,17 @@ background-image: linear-gradient(to bottom, orange, yellow);
 
 Specifying how backgrounds scroll when the content scrolls. This is controlled using the `background-attachment` property, which can take the following values:
 
-* `scroll`: This fixes the background to the page viewport, so it will scroll as the page scrolls. Note we said viewport, not element — if you scroll the actual element the background is set on, not the page, the background won't scroll.
-* `fixed`: This fixes the background in position on the page, so it won't scroll as the page scrolls — it will stay in exactly the same position whether you scroll the page or the element the background is set on.
-* `local`: This value was added later on (it is only supported in Internet Explorer 9+, whereas the others are supported in IE4+) because the scroll value is rather confusing and doesn't really do what you want in many cases. The local value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.
+- `scroll`: This fixes the background to the page viewport, so it will scroll as the page scrolls. Note we said viewport, not element — if you scroll the actual element the background is set on, not the page, the background won't scroll.
+- `fixed`: This fixes the background in position on the page, so it won't scroll as the page scrolls — it will stay in exactly the same position whether you scroll the page or the element the background is set on.
+- `local`: This value was added later on (it is only supported in Internet Explorer 9+, whereas the others are supported in IE4+) because the scroll value is rather confusing and doesn't really do what you want in many cases. The local value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.
 
 ### Background shorthand
 
 It is possible to declare all of the property values discussed above (and some others, in newer browsers) in a single line, using the `background` property. For example,
 
 ```css
-background: yellow linear-gradient(to bottom, orange, yellow) no-repeat left center scroll;
+background: yellow linear-gradient(to bottom, orange, yellow) no-repeat left center
+  scroll;
 ```
 
 ### Multiple backgrounds
@@ -107,9 +108,12 @@ background: yellow linear-gradient(to bottom, orange, yellow) no-repeat left cen
 The ability to attach multiple backgrounds to a single element. For example,
 
 ```css
-background: url(image.png) no-repeat 99% center,
-            url(background-tile.png),
-            linear-gradient(to bottom, yellow, #dddd00 50%, orange);
+background: url(image.png) no-repeat 99% center, url(background-tile.png), linear-gradient(
+    to bottom,
+    yellow,
+    #dddd00 50%,
+    orange
+  );
 background-color: yellow;
 ```
 

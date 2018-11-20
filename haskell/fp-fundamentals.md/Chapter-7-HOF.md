@@ -4,9 +4,9 @@
 
 A function is HOF if it takes a function as an argument or returns a function as a result.
 
-* Common idioms can be encoded in the language itself
-* DSLs can be defined as the collection of HOFs
-* Algebraic properties f the HOFs can be used to reason about the programs
+- Common idioms can be encoded in the language itself
+- DSLs can be defined as the collection of HOFs
+- Algebraic properties f the HOFs can be used to reason about the programs
 
 ## The Map Function
 
@@ -63,9 +63,9 @@ foldr f v [] = v
 foldr f v (x:xs) = f x (foldr f v xs)
 ```
 
-* Recursive functions on lists are simpler to define using `foldr`
-* Properties of functions can be proved using the algebraic properties of `foldr`
-* Programs optimizations can be simpler if foldr is used in place of explicit recursion
+- Recursive functions on lists are simpler to define using `foldr`
+- Properties of functions can be proved using the algebraic properties of `foldr`
+- Programs optimizations can be simpler if foldr is used in place of explicit recursion
 
 ## Other Library Functions
 

@@ -54,10 +54,10 @@ p = do x <- item
     return (x, y)
 ```
 
-* Each parser must begin in the same column -- the layout rule applies
-* Values returned by intermediate parsers are discarded by default, but if required can be named
-* The value returned by the last parser is the value returned by the whole parser.
-* The `do` notation can be used with any monadic type
-* If any sequence fails, the whole parser fails
+- Each parser must begin in the same column -- the layout rule applies
+- Values returned by intermediate parsers are discarded by default, but if required can be named
+- The value returned by the last parser is the value returned by the whole parser.
+- The `do` notation can be used with any monadic type
+- If any sequence fails, the whole parser fails
 
 ---

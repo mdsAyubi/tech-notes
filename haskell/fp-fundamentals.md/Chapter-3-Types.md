@@ -14,12 +14,12 @@ Every well formed expression has a type. Denoted by `e::t`. Type is inferred. Ty
 
 ## Basic Types
 
-* Bool
-* Char
-* String
-* Int
-* Integer
-* Float
+- Bool
+- Char
+- String
+- Int
+- Integer
+- Float
 
 ## List types
 
@@ -31,11 +31,11 @@ Sequence of values of different types. `(1, True, 'C') :: (Int, Bool, Char)`
 
 ## Function Types
 
-Function is mapping from values of one type to values of another type. `not :: Bool -> Bool`. In general `:: t1 -> t2`. In a more OOP setting, 
+Function is mapping from values of one type to values of another type. `not :: Bool -> Bool`. In general `:: t1 -> t2`. In a more OOP setting,
 
-* Function< T > ~ () -> T
-* Function<S,T> ~ S -> T
-* Action< T > ~ T -> ()
+- Function< T > ~ () -> T
+- Function<S,T> ~ S -> T
+- Action< T > ~ T -> ()
 
 ```haskell
 add::(Int, Int) -> Int
@@ -53,8 +53,8 @@ These are more flexible. Useful functions can often be made from partially apply
 
 ## Currying Conventions
 
-* The arrow associates to the right. `Int -> Int -> Int -> Int` means `Int -> (Int -> (Int -> Int))`
-* Application of the function associates to the left
+- The arrow associates to the right. `Int -> Int -> Int -> Int` means `Int -> (Int -> (Int -> Int))`
+- Application of the function associates to the left
 
 ## Polymorphic Functions
 
@@ -62,6 +62,6 @@ A function is called polymorphic if its type contains one or more type variables
 
 Some of the type classes
 
-* Num
-* Eq
-* Ord
+- Num
+- Eq
+- Ord

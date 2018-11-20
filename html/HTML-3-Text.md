@@ -49,9 +49,9 @@ We use the `<strong>` (strong importance) element to mark up bold content.
 
 ### Italic, bold, underline et all
 
-* `<i>` is used to convey a meaning traditionally conveyed by italic: Foreign words, taxonomic designation, technical terms, a thought.
-* `<b>` is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence...
-* `<u>` is used to convey a meaning traditionally conveyed by underline: Proper name, misspelling.
+- `<i>` is used to convey a meaning traditionally conveyed by italic: Foreign words, taxonomic designation, technical terms, a thought.
+- `<b>` is used to convey a meaning traditionally conveyed by bold: Key words, product names, lead sentence...
+- `<u>` is used to convey a meaning traditionally conveyed by underline: Proper name, misspelling.
 
 ---
 

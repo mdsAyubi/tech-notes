@@ -11,10 +11,10 @@
 ## Writing first web server
 
 ```javascript
-var http=require('http');
-var s = http.createServer(function(req,res){
-	console.log("Got a request!!!");
-	res.end("Hey, thanks for calling!");
+var http = require("http");
+var s = http.createServer(function(req, res) {
+  console.log("Got a request!!!");
+  res.end("Hey, thanks for calling!");
 });
 s.listen(8080);
 ```
@@ -67,7 +67,7 @@ s.listen(8080);
 - Wrapped in double and single quotes
 - `x.length` property for length
 - concatenate using +
-- left to right associativity  for +
+- left to right associativity for +
 - `indexOf` for index of a string , -1 for for not found
 - `substr(startingIndex,length)`
 - `slice(startingIndex, endingIndex)`
@@ -104,16 +104,16 @@ s.listen(8080);
 - `sort()` to sort the array
 
 ```javascript
-names.forEach(function(value){
-	console.log(value);
+names.forEach(function(value) {
+  console.log(value);
 });
 
-names.sort(function(a,b){
-	a = a.toLowerCase();
-	b = b.toLowerCase();
-	if(a<b) return -1;
-	if(a>b) return 1;
-	return 0;
+names.sort(function(a, b) {
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
 });
 ```
 
@@ -230,7 +230,7 @@ What happens when you call async version of an API like fstat in a loop, the fun
 - databases => databases
 - tables =>collections
 - records => documents
-- rm -rf data/* && ./mongodb --dbpath=./data
+- rm -rf data/\* && ./mongodb --dbpath=./data
 - Unique Id in collection, always provided. Choose your own wisely.
 - db.collections to create tables/collection
 - db.createCollection
@@ -238,7 +238,7 @@ What happens when you call async version of an API like fstat in a loop, the fun
 - db.close
 - error code for different errors like 11000 for duplicate
 - albums.insert
-- albums.remove({_id:<some_id>})
+- albums.remove({\_id:<some_id>})
 - Update
 
 ```javascript
@@ -250,13 +250,12 @@ cb
 ```
 
 - In case of update
-	* set
-	* inc
-	* rename
-	* push
-	* pushAll
-	* pop
-	* pull
+  _ set
+  _ inc
+  _ rename
+  _ push
+  _ pushAll
+  _ pop \* pull
 
 ## Find method in Mongo
 
@@ -298,16 +297,15 @@ s.on('end', function(){
 ```
 
 - for find function
-	* $and
-	* $or
-	* $ne
-	* $lt
-	* $lte
-	* $gt
-	* $gte
-	* $in
-	* $nin
-	* $all
+  _ \$and
+  _ $or
+			*$ne
+  _ \$lt
+  _ $lte
+			*$gt
+  _ \$gte
+  _ $in
+			*$nin \* \$all
 - sort({date:-1})
 - skip(<num>)
 - limit(<num>)

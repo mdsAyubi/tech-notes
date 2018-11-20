@@ -4,9 +4,9 @@ Haskell functions are pure. In order to enable programs t interact with their en
 
 ## Basic Actions
 
-* `getChar :: IO Char` : Reads a character from the keyboard, prints on the screen and returns the character read from the screen.
-* `putChar :: Char -> IO ()` : Writes a character to the screen and returns nothing.
-* `return :: a -> IO a` : Simply returns the value v without performing any interactions
+- `getChar :: IO Char` : Reads a character from the keyboard, prints on the screen and returns the character read from the screen.
+- `putChar :: Char -> IO ()` : Writes a character to the screen and returns nothing.
+- `return :: a -> IO a` : Simply returns the value v without performing any interactions
 
 ## Derived Primitives
 

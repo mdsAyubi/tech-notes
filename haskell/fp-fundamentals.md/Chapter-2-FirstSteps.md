@@ -2,9 +2,9 @@
 
 ## The Hugs System
 
-* Hugs
-* `ghci`
-* <haskell.org>
+- Hugs
+- `ghci`
+- <haskell.org>
 
 All of the above with the REPL.
 
@@ -12,15 +12,15 @@ All of the above with the REPL.
 
 Comes with the standard functions. Some of the functions
 
-* `tail [1,2,3]`
-* Select nth element with `!!`
-* First n elements with `take 3 [1,2,3,4,5]`
-* `drop 3 [1,2,3,4]`
-* `length [1,2,3,4]`
-* `sum [1,2,3,4,5]`
-* `product [1,2,3]`
-* `[1,2,3] ++ [1,5]`
-* `reverse [1,2,3]`
+- `tail [1,2,3]`
+- Select nth element with `!!`
+- First n elements with `take 3 [1,2,3,4,5]`
+- `drop 3 [1,2,3,4]`
+- `length [1,2,3,4]`
+- `sum [1,2,3,4,5]`
+- `product [1,2,3]`
+- `[1,2,3] ++ [1,5]`
+- `reverse [1,2,3]`
 
 C# receiver.method(a,b,c)
 Haskell `method receiver a b c` - Can pattern match into dynamic type of all the parameters
@@ -29,17 +29,17 @@ Haskell `method receiver a b c` - Can pattern match into dynamic type of all the
 
 For example, f(a,b) + c d --> In Haskell, this can be represented as `f a b + c * d`. Some more comparison
 
-|Mathematics | Haskell|
-|:---------:|:--------:|
-|f(x) | `f x`|
-|f(g(x)) | `f (g x)`|
-|f(x)g(y) | `f x * g y`|
+| Mathematics |   Haskell   |
+| :---------: | :---------: |
+|    f(x)     |    `f x`    |
+|   f(g(x))   |  `f (g x)`  |
+|  f(x)g(y)   | `f x * g y` |
 
 ## Haskell Scripts
 
-* Define own functions
-* Defined within a script
-* Usually with a .hs extension
+- Define own functions
+- Defined within a script
+- Usually with a .hs extension
 
 For example
 
@@ -59,21 +59,21 @@ average = sum x `div` length x
 
 ## Naming Requirements
 
-* Function and arguments names must begin with lower case letters
-* By convention, list arguments have an __s__ suffix on their name
-* Type names always start with upper case
+- Function and arguments names must begin with lower case letters
+- By convention, list arguments have an **s** suffix on their name
+- Type names always start with upper case
 
 ## The Layout Rule
 
-* Each definition must begin the same column
-* Can use semicolon and `{`
+- Each definition must begin the same column
+- Can use semicolon and `{`
 
 ## Useful commands
 
-* :load name -- loads the script
-* :reload -- reload the current script
-* :edit name -- edit the script
-* :edit -- edit current script
-* :type expr -- show type of expr
-* :? -- show all commands
-* :quit -- quit the repl
+- :load name -- loads the script
+- :reload -- reload the current script
+- :edit name -- edit the script
+- :edit -- edit current script
+- :type expr -- show type of expr
+- :? -- show all commands
+- :quit -- quit the repl

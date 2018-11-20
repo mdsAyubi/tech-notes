@@ -8,22 +8,22 @@ Bootstrap's grid system allows up to 12 columns across the page. If you do not w
 
 The Bootstrap grid system has four classes:
 
-* `xs` (for phones - screens less than 768px wide)
-* `sm` (for tablets - screens equal to or greater than 768px wide)
-* `md` (for small laptops - screens equal to or greater than 992px wide)
-* `lg` (for laptops and desktops - screens equal to or greater than 1200px wide)
+- `xs` (for phones - screens less than 768px wide)
+- `sm` (for tablets - screens equal to or greater than 768px wide)
+- `md` (for small laptops - screens equal to or greater than 992px wide)
+- `lg` (for laptops and desktops - screens equal to or greater than 1200px wide)
 
 ### Grid System Rules
 
 Some Bootstrap grid system rules:
 
-* Rows must be placed within a `.container` (fixed-width) or `.container-fluid` (full-width) for proper alignment and padding
-* Use rows to create horizontal groups of columns
-* Content should be placed within columns, and only columns may be immediate children of rows
-* Predefined classes like `.row` and `.col-sm-4` are available for quickly making grid layouts
-* Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on `.rows`
-* Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three `.col-sm-4`
-* Column widths are in percentage, so they are always fluid and sized relative to their parent element
+- Rows must be placed within a `.container` (fixed-width) or `.container-fluid` (full-width) for proper alignment and padding
+- Use rows to create horizontal groups of columns
+- Content should be placed within columns, and only columns may be immediate children of rows
+- Predefined classes like `.row` and `.col-sm-4` are available for quickly making grid layouts
+- Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on `.rows`
+- Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three `.col-sm-4`
+- Column widths are in percentage, so they are always fluid and sized relative to their parent element
 
 ### Basic Structure of a Bootstrap Grid
 
@@ -38,9 +38,7 @@ Some Bootstrap grid system rules:
     <div class="col-*-*"></div>
     <div class="col-*-*"></div>
   </div>
-  <div class="row">
-    ...
-  </div>
+  <div class="row">...</div>
 </div>
 ```
 

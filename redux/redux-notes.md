@@ -41,30 +41,28 @@ The sore binds the above principles together. It has a `getState` method for the
      return {getState, dispatch, subscribe};
 
  }
- ```
+```
 
 ## Array Sanity
 
-* Avoid `push` and use `[...list, 0]` instead.
-* Avoid `splice` and use `[...list.slice(0, index) ...list.slice(index+1)]`
-* Avoid index mutation and use `[...list.slice(0, index) list[index]+1 ...list.slice(index + 1)]`
+- Avoid `push` and use `[...list, 0]` instead.
+- Avoid `splice` and use `[...list.slice(0, index) ...list.slice(index+1)]`
+- Avoid index mutation and use `[...list.slice(0, index) list[index]+1 ...list.slice(index + 1)]`
 
 ## Object Sanity
 
-* Avoid mutating object fields and use `{...todo, completed: !todo.completed}` instead.
+- Avoid mutating object fields and use `{...todo, completed: !todo.completed}` instead.
 
 ## Combining Reducers
 
 Redux gives a utility function called `combinedReducers` which take different pure functions managing different parts of the state tree into one combined function. It takes an object with the keys corresponding to the keys of the state tree and values corresponding the functions managing that part of the state tree. For example.
 
 ```js
-
-const {combinedReducers} = Redux
+const { combinedReducers } = Redux;
 const todo = combineReducers({
-    todos: todos,
-    visibilityFilter: visibilityFilter
-})
-
+  todos: todos,
+  visibilityFilter: visibilityFilter
+});
 ```
 
 Usually, we name the reducers after the state keys they manage. Using this convention, we can simplify the above code like this `combineReducers({todos, visibilityFilter})`.
@@ -72,16 +70,14 @@ Usually, we name the reducers after the state keys they manage. Using this conve
 A simple `combineReducer` can be implemented as follows.
 
 ```js
-
-const combineReducers = (reducers) => {
-    return (state = {}, action) => {
-        return Object.keys(reducers).reduce((nextState, key)=>{
-            nextState[key] = reducer[key](state[key], action);
-            return nextState;
-        }, {});
-    };
+const combineReducers = reducers => {
+  return (state = {}, action) => {
+    return Object.keys(reducers).reduce((nextState, key) => {
+      nextState[key] = reducer[key](state[key], action);
+      return nextState;
+    }, {});
+  };
 };
-
 ```
 
 ## The Provider
@@ -97,14 +93,12 @@ Similarly, `mapDispatchToProps` function is used to dispatch actions to the stor
 Use `mapStateToProps` and `mapDispatchToProps` as arguments to the `connect` method obtained from `react-redux` binding to generate the container component.
 
 ```js
-
 //Connecting a component
-const {connect} = ReactRedux
+const { connect } = ReactRedux;
 const VisibleTodoList = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(TodoList);
-
 ```
 
 As a general idea, break the application into suitable presentational components, if there is too much boiler plate, passing the props and event handlers to the leaf components, consider making container components around them.

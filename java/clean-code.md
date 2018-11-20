@@ -48,8 +48,8 @@
 1. Use early returns for alternate flows.
 1. Cyclomatic complexity - No of branches < 10.
 1. CQS - Command Query Segregation - A function should not be a command and query both.
-    1. Query doesn't have side effects.
-    1. A command changes the system state.
+   1. Query doesn't have side effects.
+   1. A command changes the system state.
 
 ## Data Structures
 
@@ -72,11 +72,11 @@
 1. 3A + Setup and Teardown.
 1. Keep tests clean.
 1. Good test
-    1. Test as documentation
-    1. Should look plain and vanilla.
-    1. While/Switch/If/Do - Avoid logic in tests.
-    1. Strive for BDD
-    1. KISS - Keep it short and simple.
+   1. Test as documentation
+   1. Should look plain and vanilla.
+   1. While/Switch/If/Do - Avoid logic in tests.
+   1. Strive for BDD
+   1. KISS - Keep it short and simple.
 1. Don't test private methods.
 1. Avoid duplicate code.
 1. Don't expect generic exceptions.
@@ -94,11 +94,11 @@
 1. Organize the code using the newspaper metaphor. Public first. Dependency should be top down.
 1. Use constructor only when it is necessary.
 1. DBC - Design By Contract
-    1. Contract
-        1. Precondition - Expectations from the caller. Don't change preconditions while overriding.
-        1. Post condition - Expectations from the callee.
-        1. Invariant - Things which remain constant.
-    1. Logic
+   1. Contract
+      1. Precondition - Expectations from the caller. Don't change preconditions while overriding.
+      1. Post condition - Expectations from the callee.
+      1. Invariant - Things which remain constant.
+   1. Logic
 1. LSP - If it works for base, it should work for derived.
 1. Down casting - Avoid. Useful sometimes in boundary layer.
 1. If you have to downcast, wrap it and localize it at the source.

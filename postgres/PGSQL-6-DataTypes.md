@@ -10,9 +10,9 @@ Some common data types supported by PostgresSQL. Data types allow us to control 
 2. `int` - 32 bits wide whole numbers. 2^31 for signed numbers.
 3. `bigint` - 64 bits whole numbers. 2^63 for signed numbers. Around 18Exabytes.
 4. `numeric[(precision, scale)]` where
-    * `precision` is number of significant figures
-    * `scale` is number of values to the right of the decimal point.  
-    `numeric` sans precision or scale supports up to 1000 digits of precision.
+   - `precision` is number of significant figures
+   - `scale` is number of values to the right of the decimal point.  
+     `numeric` sans precision or scale supports up to 1000 digits of precision.
 5. `real` - 32 bits - variable - 6 decimal digits of precision.
 6. `double` - 64 bits - variable - 15 digits of precision.
 7. `serial` - 32 bits - auto incrementing, 2^31 for signed.
@@ -26,13 +26,14 @@ Some common data types supported by PostgresSQL. Data types allow us to control 
 
 1. `text` - varchar - unlimited - preferred character storage type withing PostgresSQL.
 2. `char(n)` - fixed length, blank padded if values is < 'n' length.  
-    char(n) truncates the values that are > 'n' length.  
-    `char -> char(1)` - effectively becomes a 1 -character field.
+   char(n) truncates the values that are > 'n' length.  
+   `char -> char(1)` - effectively becomes a 1 -character field.
 3. `varchar(n)` - variable length with 'n' limit, if 'n' is present. Does not blank pad.
-    `varchar` -> variable length - Does nt blank pad.  
-    Use `text` or `varchar` when storing strings. These are the recommended types.
+   `varchar` -> variable length - Does nt blank pad.  
+   Use `text` or `varchar` when storing strings. These are the recommended types.
 
 ### Dates and Time
+
 Uses Julian Dates in date calculation.
 
 1. `date` - 32 bits. Dates only.
@@ -61,4 +62,3 @@ Uses Julian Dates in date calculation.
 1. Arrays
 2. XML
 3. etc....
-

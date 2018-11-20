@@ -23,7 +23,6 @@
 - We put the keyword where after the guards (usually it's best to indent it as much as the pipes are indented) and then we define several names or functions.
 - where bindings aren't shared across function bodies of different patterns.
 
-
 ## Let it be
 
 - Let bindings let you bind to variables anywhere and are expressions themselves, but are very local, so they don't span across guards.

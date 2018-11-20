@@ -4,13 +4,13 @@ How to place your boxes in the right place in relation to the viewport, and one 
 
 ## Introduction to CSS Layout
 
-CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned relative to their default position in normal layout flow, the other elements around them, their parent container, or the main viewport/window.  The page layout techniques we'll be covering in more detail in this module are:
+CSS page layout techniques allow us to take elements contained in a web page and control where they are positioned relative to their default position in normal layout flow, the other elements around them, their parent container, or the main viewport/window. The page layout techniques we'll be covering in more detail in this module are:
 
-* Floats
-* Positioning
-* CSS tables
-* Flexbox
-* Grid
+- Floats
+- Positioning
+- CSS tables
+- Flexbox
+- Grid
 
 ### Normal layout flow
 
@@ -18,9 +18,9 @@ Normal flow is how the browser lays out HTML pages by default when you do nothin
 
 Layout techniques tend to override this default behavior, using:
 
-* The `position` property — `static` is the default in normal flow, but you can cause elements to be laid out differently using other values.
-* Floats — applying a `float` value such as `left` can cause block level elements to line up alongside one another rather than sit on top of one another.
-* The `display` property — standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow.
+- The `position` property — `static` is the default in normal flow, but you can cause elements to be laid out differently using other values.
+- Floats — applying a `float` value such as `left` can cause block level elements to line up alongside one another rather than sit on top of one another.
+- The `display` property — standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow.
 
 ### The Float Property
 
@@ -28,21 +28,27 @@ Floats is a technique that allows the elements to float to the left or right of 
 
 The float property has four possible values:
 
-* `left` — floats the element to the left.
-* `right` — floats the element to the right.
-* `none` — specified no floating at all. This is the default value.
-* `inherit` — specifies that the value of the float property should be inherited from the parent element.
+- `left` — floats the element to the left.
+- `right` — floats the element to the right.
+- `none` — specified no floating at all. This is the default value.
+- `inherit` — specifies that the value of the float property should be inherited from the parent element.
 
 ```html
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut.
+  </p>
 </div>
 ```
 
@@ -62,10 +68,10 @@ div:nth-of-type(2) {
 
 Positioning allows you to move an element from it's original spot on the page to another spot.
 
-* Static positioning is the default that every element gets — it just means "put the element into it's normal position in the document layout flow — nothing special to see here".
-* Relative positioning allows you to modify an element's position on the page, moving it relative to its position in normal flow.
-* Absolute positioning moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's `<html>` element (or it's nearest positioned ancestor element).
-* Fixed positioning is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
+- Static positioning is the default that every element gets — it just means "put the element into it's normal position in the document layout flow — nothing special to see here".
+- Relative positioning allows you to modify an element's position on the page, moving it relative to its position in normal flow.
+- Absolute positioning moves an element completely out of the page's normal layout flow, like it is sitting on its own separate layer. From there, you can fix it in a position relative to the edges of the page's `<html>` element (or it's nearest positioned ancestor element).
+- Fixed positioning is very similar to absolute positioning, except that it fixes an element relative to the browser viewport, not another element. This is useful for creating effects such as a persistent navigation menu that always stays in the same place on the screen as the rest of the content scrolls.
 
 ### CSS tables
 
@@ -75,17 +81,12 @@ CSS tables exist to allow you to lay out elements like they were a table — thi
 <form>
   <p>First of all, tell us your name and age.</p>
   <div>
-    <label for="fname">First name:</label>
-    <input type="text" id="fname">
+    <label for="fname">First name:</label> <input type="text" id="fname" />
   </div>
   <div>
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname">
+    <label for="lname">Last name:</label> <input type="text" id="lname" />
   </div>
-  <div>
-    <label for="age">Age:</label>
-    <input type="text" id="age">
-  </div>
+  <div><label for="age">Age:</label> <input type="text" id="age" /></div>
 </form>
 ```
 
@@ -105,7 +106,8 @@ form div {
   display: table-row;
 }
 
-form label, form input {
+form label,
+form input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -171,16 +173,17 @@ div:last-child {
   margin-right: 0;
 }
 
-section, div {
-  border: 5px solid rgba(0,0,0,0.85);
+section,
+div {
+  border: 5px solid rgba(0, 0, 0, 0.85);
   padding: 10px;
 }
 ```
 
 Two lines of this CSS are really interesting:
 
-* `display: flex;` tells the `<section>` element's children to be laid out as flexible boxes — by default, they will all stretch to fill the available height of the parent, whatever that is, and be laid out in a row — with enough width to wrap their content.
-* `flex: 1;` tells each `<div>` element to take up an equal amount of the space available in the row, no matter how many there are.
+- `display: flex;` tells the `<section>` element's children to be laid out as flexible boxes — by default, they will all stretch to fill the available height of the parent, whatever that is, and be laid out in a row — with enough width to wrap their content.
+- `flex: 1;` tells each `<div>` element to take up an equal amount of the space available in the row, no matter how many there are.
 
 ### Grid layout
 
@@ -204,12 +207,31 @@ Below is the example.
 <h1>2 column layout example</h1>
 <div>
   <h2>First column</h2>
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 </div>
 
 <div>
   <h2>Second column</h2>
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -283,7 +305,7 @@ The normal layout flow (mentioned in the layout introduction article) is the sys
 
 Inline elements behave differently — they don't appear on new lines; instead, they sit on the same line as one another and any adjacent (or wrapped) text content, as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing text or elements wil move down to a new line.
 
-If two adjacent elements both have margin set on them and the two margins touch, the larger of the two remains, and the smaller one disappears — this is called __margin collapsing__.
+If two adjacent elements both have margin set on them and the two margins touch, the larger of the two remains, and the smaller one disappears — this is called **margin collapsing**.
 
 ### Introducing positioning
 
@@ -337,10 +359,10 @@ Set a special value of `display: flex;` on the parent element of the elements yo
 
 When elements are laid out as flexible boxes, they are laid out along two axes:
 
-* The __main axis__ is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the __main start__ and __main end__.
-* The __cross axis__ is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the __cross start__ and __cross end__.
-* The parent element that has `display: flex;` set on it is called the __flex container__.
-* The items being laid out as flexible boxes inside the flex container are called __flex items__.
+- The **main axis** is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the **main start** and **main end**.
+- The **cross axis** is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the **cross start** and **cross end**.
+- The parent element that has `display: flex;` set on it is called the **flex container**.
+- The items being laid out as flexible boxes inside the flex container are called **flex items**.
 
 ### Columns or rows
 
@@ -401,9 +423,9 @@ This basically states "Each flex item will first be given 200px of the available
 
 `flex` is a shorthand property that can specify up to three different values:
 
-* The unitless proportion value. This can be specified individually using the `flex-grow` longhand property.
-* A second unitless proportion value — `flex-shrink` — that comes into play when the flex items are overflowing their container. This specifies how much of the overflowing amount is taken away from each flex item's size, to stop them overflowing their container.
-* The minimum size value. This can be specified individually using the `flex-basis` longhand value.
+- The unitless proportion value. This can be specified individually using the `flex-grow` longhand property.
+- A second unitless proportion value — `flex-shrink` — that comes into play when the flex items are overflowing their container. This specifies how much of the overflowing amount is taken away from each flex item's size, to stop them overflowing their container.
+- The minimum size value. This can be specified individually using the `flex-basis` longhand value.
 
 ### Horizontal and vertical alignment
 
@@ -411,17 +433,17 @@ You can also use flexbox features to align flex items along the main or cross ax
 
 `align-items` controls where the flex items sit on the cross axis.
 
-* By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items.
-* The `center` value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis.
-* You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively.
+- By default, the value is `stretch`, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items.
+- The `center` value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis.
+- You can also have values like `flex-start` and `flex-end`, which will align all items at the start and end of the cross axis respectively.
 
 `justify-content` controls where the flex items sit on the main axis.
 
-* The default value is `flex-start`, which makes all the items sit at the start of the main axis.
-* You can use `flex-end` to make them sit at the end.
-* `center` is also a value for `justify-content`, and will make the flex items sit in the center of the main axis.
-* `space-around` — it distributes all the items evenly along the main axis, with a bit of space left at either end.
-* `space-between` - which is very similar to `space-around` except that it doesn't leave any space at either end.
+- The default value is `flex-start`, which makes all the items sit at the start of the main axis.
+- You can use `flex-end` to make them sit at the end.
+- `center` is also a value for `justify-content`, and will make the flex items sit in the center of the main axis.
+- `space-around` — it distributes all the items evenly along the main axis, with a bit of space left at either end.
+- `space-between` - which is very similar to `space-around` except that it doesn't leave any space at either end.
 
 ### Ordering flex items
 

@@ -14,5 +14,5 @@ Install following the GUI prompts
 7. data/pg_xlog - Write ahead log - maintains changes to DB files at all time
 8. data/postmaster.opts - defines how the server starts usually with -D and data directory path
 9. `/etc/init.d/postgresql-9.0` - initd manager
-    File except initd file are contained within /opt/postgresql/version hierarchy
+   File except initd file are contained within /opt/postgresql/version hierarchy
 10. Add necessary PATH variables for accessing the binaries

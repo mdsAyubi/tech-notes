@@ -12,10 +12,10 @@ Allows up to 12 columns across the page. You can group the columns together to c
 
 The Bootstrap grid system has four classes:
 
-* `xs` (for phones - screens less than 768px wide)
-* `sm` (for tablets - screens equal to or greater than 768px wide)
-* `md` (for small laptops - screens equal to or greater than 992px wide)
-* `lg` (for laptops and desktops - screens equal to or greater than 1200px wide)
+- `xs` (for phones - screens less than 768px wide)
+- `sm` (for tablets - screens equal to or greater than 768px wide)
+- `md` (for small laptops - screens equal to or greater than 992px wide)
+- `lg` (for laptops and desktops - screens equal to or greater than 1200px wide)
 
 ### Basic Structure of a Bootstrap Grid
 
@@ -50,15 +50,15 @@ In addition, all `<p>` elements have a bottom margin that equals half their comp
 
 The way some HTML elements are styled is different in bootstrap. SOme of the affected elements with this sort of styling are the following.
 
-* `<h1>` to `<h6>`
-* `<small>`
-* `<mark>`
-* `<abbr>`
-* `<blockquote>`
-* `<dl>`
-* `<code>`
-* `<kbd>`
-* `<pre>`
+- `<h1>` to `<h6>`
+- `<small>`
+- `<mark>`
+- `<abbr>`
+- `<blockquote>`
+- `<dl>`
+- `<code>`
+- `<kbd>`
+- `<pre>`
 
 ### Contextual Colors and Backgrounds
 
@@ -92,11 +92,11 @@ The `.table-condensed` class makes a table more compact by cutting cell padding 
 
 Contextual classes can be used to color table rows (`<tr>`) or table cells (`<td>`).
 
-* `.active` - Applies the hover color to the table row or table cell
-* `.success` - Indicates a successful or positive action
-* `.info` - Indicates a neutral informative change or action
-* `.warning` - Indicates a warning that might need attention
-* `.danger` - Indicates a dangerous or potentially negative action
+- `.active` - Applies the hover color to the table row or table cell
+- `.success` - Indicates a successful or positive action
+- `.info` - Indicates a neutral informative change or action
+- `.warning` - Indicates a warning that might need attention
+- `.danger` - Indicates a dangerous or potentially negative action
 
 ### Responsive Tables
 
@@ -150,7 +150,7 @@ The `.page-header` class adds a horizontal line under the heading (+ adds some e
 
 ### Wells
 
-The `.well` class adds a rounded border around an element with a gray background color and some padding. Change the size of the well by adding the `.well-sm` class for small wells or  `.well-lg` class for large wells.
+The `.well` class adds a rounded border around an element with a gray background color and some padding. Change the size of the well by adding the `.well-sm` class for small wells or `.well-lg` class for large wells.
 
 ## Bootstrap Alerts
 
@@ -176,23 +176,23 @@ The `.fade` and `.in` classes adds a fading effect when closing the alert messag
 
 Following buttons can be used.
 
-* `.btn`
-* `.btn-default`
-* `.btn-primary`
-* `.btn-success`
-* `.btn-info`
-* `.btn-warning`
-* `.btn-danger`
-* `.btn-link`
+- `.btn`
+- `.btn-default`
+- `.btn-primary`
+- `.btn-success`
+- `.btn-info`
+- `.btn-warning`
+- `.btn-danger`
+- `.btn-link`
 
 ### Button Sizes
 
 The classes that define the different sizes are:
 
-* `.btn-lg`
-* `.btn-md`
-* `.btn-sm`
-* `.btn-xs`
+- `.btn-lg`
+- `.btn-md`
+- `.btn-sm`
+- `.btn-xs`
 
 ### Block Level Buttons
 
@@ -261,10 +261,10 @@ Remove the `.sr-only` class from the progress bar to show a visible percentage.
 
 The contextual classes that can be used with progress bars are:
 
-* `.progress-bar-success`
-* `.progress-bar-info`
-* `.progress-bar-warning`
-* `.progress-bar-danger`
+- `.progress-bar-success`
+- `.progress-bar-info`
+- `.progress-bar-warning`
+- `.progress-bar-danger`
 
 ### Striped Progress Bars
 
@@ -329,7 +329,7 @@ The `.breadcrumb` class indicates the current page's location within a navigatio
   <li><a href="#">Home</a></li>
   <li><a href="#">Private</a></li>
   <li><a href="#">Pictures</a></li>
-  <li class="active">Vacation</li> 
+  <li class="active">Vacation</li>
 </ul>
 ```
 
@@ -519,7 +519,7 @@ Tabs are created with `<ul class="nav nav-tabs">`. Also mark the current page wi
     <ul class="dropdown-menu">
       <li><a href="#">Submenu 1-1</a></li>
       <li><a href="#">Submenu 1-2</a></li>
-      <li><a href="#">Submenu 1-3</a></li> 
+      <li><a href="#">Submenu 1-3</a></li>
     </ul>
   </li>
   <li><a href="#">Menu 2</a></li>
@@ -577,7 +577,7 @@ Pills can also be displayed vertically. Just add the `.nav-stacked` class. For e
     <ul class="dropdown-menu">
       <li><a href="#">Submenu 1-1</a></li>
       <li><a href="#">Submenu 1-2</a></li>
-      <li><a href="#">Submenu 1-3</a></li> 
+      <li><a href="#">Submenu 1-3</a></li>
     </ul>
   </li>
   <li><a href="#">Menu 2</a></li>
@@ -705,7 +705,7 @@ The navigation bar takes up too much space on a small screen. We should hide the
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
-    <span class="icon-bar"></span> 
+    <span class="icon-bar"></span>
   </button>
   <a class="navbar-brand" href="#">WebSiteName</a>
 </div>
@@ -721,14 +721,14 @@ Form controls automatically receive some global styling with Bootstrap. All text
 
 Bootstrap provides three types of form layouts:
 
-* Vertical form (this is default)
-* Horizontal form
-* Inline form
+- Vertical form (this is default)
+- Horizontal form
+- Inline form
 
 Standard rules for all three form layouts:
 
-* Wrap labels and form controls in `<div class="form-group">` (needed for optimum spacing)
-* Add class `.form-control` to all textual `<input>`, `<textarea>`, and `<select>` elements.
+- Wrap labels and form controls in `<div class="form-group">` (needed for optimum spacing)
+- Add class `.form-control` to all textual `<input>`, `<textarea>`, and `<select>` elements.
 
 ### Vertical Form (default)
 
@@ -774,8 +774,8 @@ To get an inline form layout, add class `.form-inline` to the `<form>` element. 
 
 A horizontal form means that the labels are aligned next to the input field (horizontal) on large and medium screens. On small screens (767px and below), it will transform to a vertical form.
 
-* Add class `.form-horizontal` to the `<form>` element.
-* Add class `.control-label` to all `<label>` elements.
+- Add class `.form-horizontal` to the `<form>` element.
+- Add class `.control-label` to all `<label>` elements.
 
 ## Bootstrap Form Inputs
 
@@ -783,11 +783,11 @@ A horizontal form means that the labels are aligned next to the input field (hor
 
 Bootstrap supports the following form controls:
 
-* input - `<input type="text" class="form-control" id="usr">`
-* textarea - `<textarea class="form-control" rows="5" id="comment"></textarea>`
-* checkbox - `<input type="checkbox" value="">`
-* radio - `<input type="radio" name="options_radio">`
-* select - `select class="form-control" id="sel1"><option>1</option></select>`
+- input - `<input type="text" class="form-control" id="usr">`
+- textarea - `<textarea class="form-control" rows="5" id="comment"></textarea>`
+- checkbox - `<input type="checkbox" value="">`
+- radio - `<input type="radio" name="options_radio">`
+- select - `select class="form-control" id="sel1"><option>1</option></select>`
 
 Bootstrap supports all the HTML5 input types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
 
@@ -797,19 +797,19 @@ If you need to insert plain text next to a form label within a horizontal form, 
 
 ### Input Groups
 
-* The `.input-group` class is a container to enhance an input by adding an icon, text or a button in front or behind it as a "help text".
-* The `.input-group-addon` class attaches an icon or help text next to the input field.
-* The `.input-group-btn` attaches a button next to an input. This is often used together with a search bar.
+- The `.input-group` class is a container to enhance an input by adding an icon, text or a button in front or behind it as a "help text".
+- The `.input-group-addon` class attaches an icon or help text next to the input field.
+- The `.input-group-btn` attaches a button next to an input. This is often used together with a search bar.
 
 ### Form Control States
 
-* INPUT FOCUS - The outline of the input is removed and a box-shadow is applied on focus
-* DISABLED INPUTS - Add a `disabled` attribute to disable an input field
-* DISABLED FIELD SETS - Add a `disabled` attribute to a field set to disable all controls within
-* READ ONLY INPUTS - Add a `readonly` attribute to an input to prevent user input
-* VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages. To use, add `.has-warning`, `.has-error`, or `.has-success` to the parent element
-* ICONS - You can add feedback icons with the `.has-feedback` class and an icon
-* HIDDEN LABELS - Add a `.sr-only` class on non-visible labels
+- INPUT FOCUS - The outline of the input is removed and a box-shadow is applied on focus
+- DISABLED INPUTS - Add a `disabled` attribute to disable an input field
+- DISABLED FIELD SETS - Add a `disabled` attribute to a field set to disable all controls within
+- READ ONLY INPUTS - Add a `readonly` attribute to an input to prevent user input
+- VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages. To use, add `.has-warning`, `.has-error`, or `.has-success` to the parent element
+- ICONS - You can add feedback icons with the `.has-feedback` class and an icon
+- HIDDEN LABELS - Add a `.sr-only` class on non-visible labels
 
 ## Bootstrap Input Sizing
 

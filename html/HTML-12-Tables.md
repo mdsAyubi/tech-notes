@@ -15,8 +15,8 @@ HTML has a method of defining styling information for an entire column of data a
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -39,7 +39,9 @@ You can give your table a caption by putting it inside a `<caption>` element and
 
 ```html
 <table>
-  <caption>Dinosaurs in the Jurassic period</caption>
+  <caption>
+    Dinosaurs in the Jurassic period
+  </caption>
 
   ...
 </table>

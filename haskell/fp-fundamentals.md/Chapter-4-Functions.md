@@ -87,8 +87,8 @@ pred :: Int -> Int
 pred (n + 1) = n
 ```
 
-* n + k patterns only match integers >= k
-* n + k patterns must be parenthesised, because function application has priority over +.
+- n + k patterns only match integers >= k
+- n + k patterns must be parenthesised, because function application has priority over +.
 
 ## Lambda Expression
 

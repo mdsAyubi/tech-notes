@@ -3,13 +3,13 @@
 ## Hello world with React APIs
 
 ```js
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 const element = React.createElement(
-    'div',
-    {className: 'container'},
-    'Hello World'
+  "div",
+  { className: "container" },
+  "Hello World"
 );
-ReactDOM.render(element, rootElement)
+ReactDOM.render(element, rootElement);
 ```
 
 The element you want to create and then the children(any number possible). You can also write the children as `children` prop inside the the props object.
@@ -17,69 +17,73 @@ The element you want to create and then the children(any number possible). You c
 ## JSX
 
 ```js
-const element = <div className="container">Hello World</div>
+const element = <div className="container">Hello World</div>;
 
 //OR
 
 const props = {
-    className: 'container',
-    children: 'Hello world'
+  className: "container",
+  children: "Hello world"
 };
-const element = (
-    <div {...props} />
-)
+const element = <div {...props} />;
 
 //OR, to override
 
-const element = (
-    <div {...props} className="my__class_name"/>
-)
+const element = <div {...props} className="my__class_name" />;
 ```
 
 Include babel standalone in the project and and change the script type to `text/babel` for on the fly compilation without any build system.
 
-* `class` -> `className`
-* Interpolation -- Insert any JS inside JSX
+- `class` -> `className`
+- Interpolation -- Insert any JS inside JSX
 
 ## Custom react components
 
 ```js
-const message = (props) => <div>{props.msg}</div>
-const Message = (props) => <div>{props.msg}</div>
+const message = props => <div>{props.msg}</div>;
+const Message = props => <div>{props.msg}</div>;
 
 //Can be used with createElement API
-const element = <div className="container">
-    {React.createElement(message, {msg: 'Hello World'})}
-    {React.createElement(message, {msg: 'Goodbye World'})}
+const element = (
+  <div className="container">
+    {React.createElement(message, { msg: "Hello World" })}
+    {React.createElement(message, { msg: "Goodbye World" })}
     <Message msg="Hello World" />
-</div>
+  </div>
+);
 ReactDOM.render(element, rootElement);
 ```
 
 ## Validating props with PropTypes
 
 ```js
-const SayHello = (props) => <div> {props.firstName} {props.lastName}! </div>
+const SayHello = props => (
+  <div>
+    {" "}
+    {props.firstName} {props.lastName}!{" "}
+  </div>
+);
 
 const PropTypes = {
-    string(props, propName, componentName) {
-        if(typeof props[propName] !== 'string'){
-            return new Error(`Not valid type, string expected for ${props[propName]}`)
-        }
+  string(props, propName, componentName) {
+    if (typeof props[propName] !== "string") {
+      return new Error(
+        `Not valid type, string expected for ${props[propName]}`
+      );
     }
+  }
 };
 
 SayHello.propTypes = {
-    firstName: PropTypes.string,
-    lastName: PropTypes.string
+  firstName: PropTypes.string,
+  lastName: PropTypes.string
 };
 //This implementation can be removed and react own prop type package can be used.
-
 ```
 
-* Use `isRequired` for prop types which are required. E.g `firstName: PropTypes.string.isRequired`
-* For class components, specify `propTypes` as static members of the class.
-* For functional components, add `propTypes` key to the function.
+- Use `isRequired` for prop types which are required. E.g `firstName: PropTypes.string.isRequired`
+- For class components, specify `propTypes` as static members of the class.
+- For functional components, add `propTypes` key to the function.
 
 ## Conditional Rendering
 
@@ -94,19 +98,21 @@ React re-renders only the parts where the change is actually made.
 Components can be styled with an object with keys camelCased corresponding to the CSS props.
 
 ```js
-function Box({style, ...rest}){
-    return (
-        <div className="box box--small" style={{paddingLeft: 20, ...style}} {...rest}/>
-    )
+function Box({ style, ...rest }) {
+  return (
+    <div
+      className="box box--small"
+      style={{ paddingLeft: 20, ...style }}
+      {...rest}
+    />
+  );
 }
 
 const element = (
-    <div>
-        <Box style={{backgroundColor: 'lightblue'}}>
-            Small Box
-        </Box>
-    </div>
-)
+  <div>
+    <Box style={{ backgroundColor: "lightblue" }}>Small Box</Box>
+  </div>
+);
 ```
 
 ## Event Handling
@@ -151,10 +157,10 @@ Either use the function at `onClick` or bind the function with the object. You c
 
 ```js
 class A extends React.Component {
-    state = {count: 0}
-    handleClick = () => {
-        //Code here
-    }
+  state = { count: 0 };
+  handleClick = () => {
+    //Code here
+  };
 }
 ```
 
@@ -211,3 +217,4 @@ render() {
 }
 
 ---
+```

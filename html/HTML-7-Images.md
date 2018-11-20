@@ -10,22 +10,24 @@ The next attribute we'll look at is `alt`. Its value is supposed to be a textual
 
 The reasons to use `alt`
 
-* The user is visually impaired, and using a screen reader to read the web out to them. In fact, having alt text available to describe images is useful to most users.
-* You might have spelt the file or path name wrong.
-* The browser doesn't support the image type. Some people still use text-only browsers, such as Lynx, which alternatively displays the alt text of images.
-* You may want to provide text for search engines to utilize. For example, search engines can match alt text with search queries.
-* Users have turned off images to reduce data transfer volume and distractions. This is especially common on mobile phones, and in countries where bandwidth is limited and expensive.
+- The user is visually impaired, and using a screen reader to read the web out to them. In fact, having alt text available to describe images is useful to most users.
+- You might have spelt the file or path name wrong.
+- The browser doesn't support the image type. Some people still use text-only browsers, such as Lynx, which alternatively displays the alt text of images.
+- You may want to provide text for search engines to utilize. For example, search engines can match alt text with search queries.
+- Users have turned off images to reduce data transfer volume and distractions. This is especially common on mobile phones, and in countries where bandwidth is limited and expensive.
 
 ### Width and height
 
 You can use the `width` and `height` attributes, to specify the width and height of your image. For example,
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341">
+  width="400"
+  height="341"
+/>
 ```
 
 ### Image titles
@@ -33,12 +35,14 @@ You can use the `width` and `height` attributes, to specify the width and height
 You can also add title attributes to images, to provide further supporting information if needed.
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum"
+/>
 ```
 
 ## Annotating images with figures and figure captions
@@ -47,13 +51,17 @@ Use the HTML5 `<figure>` and `<figcaption>` elements. These are created for exac
 
 ```html
 <figure>
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341"
+  />
 
-  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
 </figure>
 ```
 

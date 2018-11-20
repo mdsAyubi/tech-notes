@@ -6,7 +6,7 @@ A line. And another line. In the same line.
 
 Leave one line to create a paragraph. Like this one will be written in a new paragraph.
 
-*Italic* and **Bold** or __Bold__ or _Italic_. Use _ for italic and ** for bold.
+_Italic_ and **Bold** or **Bold** or _Italic_. Use \_ for italic and \*\* for bold.
 
 ~~StrikeThrough~~ is done bby ~.
 
@@ -50,8 +50,10 @@ And then style it with CSS
 
 ## Lists
 
-* for bullet points, or
-+ for bullets, or
+- for bullet points, or
+
+* for bullets, or
+
 - for more bullets
 
 Use `*` for bullets though. Use consistent notation.
@@ -71,12 +73,15 @@ The above avoids the MD029 linting error as well.
 Use tabs or any indent character for sub lists. For example
 
 1. A number
-    1. With sub lists
-            -This is inline with the above bullet point
-        * More indentation
 
-            This is a paragraph on the same indent level as the bullet point
-            * Even more bullet points
+   1. With sub lists
+      -This is inline with the above bullet point
+
+      - More indentation
+
+        This is a paragraph on the same indent level as the bullet point
+
+        - Even more bullet points
 
 ## Line Breaks and Horizontal Rules
 
@@ -98,8 +103,7 @@ or
 
 Hello
 
->
-Quote here
+> Quote here
 
 > Write a nice quote
 >
@@ -116,7 +120,7 @@ But, it is better to annotate with '```[language]' for better highlighting. For 
 
 ```javascript
 var x = 100;
-const dog = 'blink';
+const dog = "blink";
 ```
 
 OR, let it guess when the language is not provided. Not recommended. Generates linting error.
@@ -137,10 +141,10 @@ var x = 100;
 
 ## Tables
 
-|Dog's Name | Dog's Age|
-|:---------:|:--------:|
-|Snickers | 2|
-|Prudence | 8|
+| Dog's Name | Dog's Age |
+| :--------: | :-------: |
+|  Snickers  |     2     |
+|  Prudence  |     8     |
 
 Use `:` to left, right or center aligned.
 
@@ -150,9 +154,9 @@ Use `:` to left, right or center aligned.
 
 This is not standard. But given by Github.
 
-* [x] Get milk
-* [] Crack Eggs
-* [] Cook
+- [x] Get milk
+- [] Crack Eggs
+- [] Cook
 
 ### Others
 

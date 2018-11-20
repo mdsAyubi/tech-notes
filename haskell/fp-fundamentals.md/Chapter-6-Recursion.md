@@ -23,9 +23,9 @@ Notice we are using n + k pattern matching here.
 
 ## Why is recursion useful
 
-* SOme functions becomes simpler to define
-* Natural
-* Properties can be proved using mathematical techniques.
+- SOme functions becomes simpler to define
+- Natural
+- Properties can be proved using mathematical techniques.
 
 ```haskell
 length :: [a] -> Int

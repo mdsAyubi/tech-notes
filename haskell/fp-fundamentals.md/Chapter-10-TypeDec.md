@@ -7,9 +7,9 @@ Can't be recursive.
 
 New type can be defined by specifying its values using a **data declaration**. E.g `data Bool = False | True`
 
-* The values True and False are called the constructors of the ype Bool
-* Type and constructor names must begin with an upper case letter.
-* Data declarations are similar to CFG.
+- The values True and False are called the constructors of the ype Bool
+- Type and constructor names must begin with an upper case letter.
+- Data declarations are similar to CFG.
 
 ```haskell
 data Maybe a = Nothing | Just a
